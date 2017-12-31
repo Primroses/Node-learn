@@ -73,5 +73,5 @@ app.get("/demo7.html",(req,res)=>{
 
 // 传参数的情况
 app.listen(8090,()=>{
-    console.log("草拟吗开始了")
+    console.log("服务器开始工作了")
 })
