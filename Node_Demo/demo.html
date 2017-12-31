@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+</style>
+<body>
+    <img src="img/school.jpg" onclick="mapOnClick(event)" id="img">
+</body>
+</html>
+<script src="http://cdn.static.runoob.com/libs/jquery/2.0.0/jquery.min.js"></script>
+<script>
+    // 显示图片内某确定点的坐标
+    function mapOnClick(e){
+        e = e || window.event;
+        var imgId ='#'+ $(e.target).attr('id');
+        var currentWidth = $(imgId).width();
+        var currentHeight = $(imgId).height();
+        var offsetX = e.pageX - ($(imgId).offset().left);
+        var offsetY = e.pageY - ($(imgId).offset().top);
+        // var x = offsetX / currentWidth;
+        // var y = offsetY / currentHeight;
+        console.log(offsetX + ':' + offsetY)        
+    }
+</script>

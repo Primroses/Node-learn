@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" onclick="GetData()">
+    <div id="div"></div>
+</body>
+</html>
+<script>
+function GetData(){
+        var xmlhttp;
+        if(window.XMLHttpRequest){
+            xmlhttp = new XMLHttpRequest();
+        }else{
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        //xmlhttp.open("GET","http://localhost:8080/webDemo/UserCheck?id="+"serpit",true);
+        
+    
+        //设置回调
+            xmlhttp.onreadystatechange = function(){
+            
+            if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+                //响应成功
+                document.getElementById("div").innerHTML = xmlhttp.responseText;
+                //console.log(xmlhttp.responseText);
+            } else{
+                div.innerText = "error";
+            }
+        };
+        xmlhttp.open("POST","http://localhost:8080",true);
+        xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+            xmlhttp.send(null);
+    }
+</script>
