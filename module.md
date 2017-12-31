@@ -11,4 +11,36 @@
 
 ## CommonJS的模块规范
 > CommonJS对模块的定义十分简单，主要分为模块引用，模块定义和模块标识3个部分
+
 **模块引用**
+
+```var math = require('math')```
+
+在CommonJS规范中，存在require()方法，接受模块标识，**以此引入模块的API**
+
+**模块定义**
+
+```
+// math.js
+exports.add = function(){
+    var sum = 0;
+    var i = 0;
+    var args = arguments;
+    var l = args.length;
+    while(i<l){
+        sum + = args[i++];
+    }
+    return sum;
+};
+
+```
+
+**在另外一个文件中就可以使用这个add方法**
+
+```
+// program.js
+var math = require('math');
+exports.increment = function(val){
+    return math.add(val,1);
+}
+```
