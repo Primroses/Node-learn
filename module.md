@@ -108,7 +108,7 @@ $ npm
 ```
 
 **全局安装**
-如果包含了命令行工具，需要执行一次```npm install <package.json>```进行全局模式安装全局模式安装就统一安装到一个目录下如果Node可执行文件的位置/usr/local/bin/node 那么模块的目录就是/usr/local/bin/node/node_modules
+如果包含了命令行工具，需要执行一次```npm install <package name>```进行全局模式安装全局模式安装就统一安装到一个目录下如果Node可执行文件的位置/usr/local/bin/node 那么模块的目录就是/usr/local/bin/node/node_modules
 
 **本地安装**
 本地安装只需指明package.json文件所在位置即可，他可以是一个包含package.json的存档文件
