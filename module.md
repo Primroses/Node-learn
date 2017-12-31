@@ -44,3 +44,7 @@ exports.increment = function(val){
     return math.add(val,1);
 }
 ```
+
+**模块标识**
+
+模块标识就是传递给require()方法的参数，必须是符合*小驼峰*命名的字符串，或者是以*..，.*开头的相对路径
