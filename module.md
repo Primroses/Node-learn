@@ -74,4 +74,41 @@ exports.increment = function(val){
 - 文件扩展名分析 require()中不包含文件扩展名，会依次按.js , .node ,.json次序依次补足扩展名，依次尝试
 - 目录和包分析 首先会查找目录下的package.json 通过JSON.parse()解析出包描述的对象。如果没有package.json 就用index作为默认文件名
 
+**包与NPM**
+- 包结构
+  
+  package.json:包描述文件
+  
+  lib:用于存放JavaScript代码的目录
 
+  doc:用于存放文档的目录
+
+  test:用于存放单元测试用例的代码
+
+>package.json 中重要的字段是 description(描述) version(版本)licenses(许可证) dependencies(依赖关系) script(脚本说明对象)
+
+>lib 是用来存放用户自己写的代码
+
+**NPM常用功能**
+
+```
+$ node -v
+//查看 node的 版本 
+```
+
+```
+$ npm install <package name>
+// 安装某个包
+```
+
+```
+$ npm 
+// 弹出所有命令
+
+```
+
+**全局安装**
+如果包含了命令行工具，需要执行一次```npm install <package.json>```进行全局模式安装全局模式安装就统一安装到一个目录下如果Node可执行文件的位置/usr/local/bin/node 那么模块的目录就是/usr/local/bin/node/node_modules
+
+**本地安装**
+本地安装只需指明package.json文件所在位置即可，他可以是一个包含package.json的存档文件
