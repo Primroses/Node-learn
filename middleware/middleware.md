@@ -33,6 +33,7 @@ var setHeader = function(){
 ```
 var express = require('express');
 var app = express();
+// 被创建的Express应用程序的对象
 app.use('/demo',function(req,res,next){
 	res.statusCode = 200;
 	res.header = {'Content-Type':'text/html'};
@@ -41,3 +42,21 @@ app.use('/demo',function(req,res,next){
 })
 app.listen(8080,"127.0.0.1");
 ```
+
+## 中间件的分类 
+- Express内置中间件 ```express.static```
+  express.static是Express目前唯一内置的中间件，用来处理静态数据的
+
+- 自定义中间件
+
+- 第三方中间件
+  **body-parser**
+	用于解析客户端请求的body内容
+  **cookie-parser**
+	解析浏览器发送的cookie
+  **express-session**
+	解析浏览器发送的session
+  **querystring** ....等等
+	解析请求路径中的参数
+
+<img src="img.png">
