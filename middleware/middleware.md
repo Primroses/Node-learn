@@ -59,4 +59,4 @@ app.listen(8080,"127.0.0.1");
   **querystring** ....等等
 	解析请求路径中的参数
 
-<img src="img.png">
+<img src="img.png" width = "300" height = "120" />
